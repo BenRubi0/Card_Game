@@ -5,7 +5,7 @@ import static com.raylib.Raylib.*;
 import org.cardgame.gameobjects.Card;
 import org.cardgame.gameobjects.bases.DrawableBackground;
 import org.cardgame.gameobjects.bases.DrawableObject;
-import org.cardgame.gameobjects.other.CardTypes;
+import org.cardgame.gameobjects.cards.AceOfSpades;
 import org.cardgame.help.WindowHelp;
 import org.cardgame.help.texture.CardMaps;
 
@@ -33,6 +33,8 @@ public class Game {
 
         Card c2 = new Card(new Vector2().y(65).y(65), num);
         drawableGameObjects.add(c2);
+
+        drawableGameObjects.add(new AceOfSpades(WindowHelp.getWinMidPos()));
 
         bg = new DrawableBackground(LoadTexture("textures/backgrounds/default.png"));
     }

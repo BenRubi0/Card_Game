@@ -7,7 +7,7 @@ public class WindowHelp {
     public static final int WIN_HEIGHT = 900;
     public static final String WIN_TITLE = "Card Game";
 
-    public static Vector2 winMidPos;
+    public static Vector2 winMidPos = new Vector2().x((float)WIN_WIDTH/2).y((float)WIN_HEIGHT/2);
 
     public static Vector2 getWinMidPos() {
         return winMidPos;
