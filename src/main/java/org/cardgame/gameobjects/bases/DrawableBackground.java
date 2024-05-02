@@ -15,7 +15,7 @@ public class DrawableBackground extends Drawable {
 
     @Override
     public void draw() {
-        DrawTextureEx(this.bgTexture, WindowHelp.getWinMidPos(), 0, 1, Jaylib.WHITE);
+        DrawTextureEx(this.bgTexture, new Vector2().x(0).y(0), 0, 1.5f, Jaylib.WHITE);
     }
 
     @Override

@@ -15,7 +15,7 @@ public class Main {
         // initialize the main window
         InitWindow(WindowHelp.WIN_WIDTH, WindowHelp.WIN_HEIGHT, WindowHelp.WIN_TITLE);
         // set a window state so the user can resize it to their liking
-        SetWindowState(FLAG_WINDOW_RESIZABLE);
+        //SetWindowState(FLAG_WINDOW_RESIZABLE);
 
         Game.init();
 

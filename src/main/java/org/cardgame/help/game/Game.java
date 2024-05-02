@@ -3,6 +3,7 @@ package org.cardgame.help.game;
 import static com.raylib.Raylib.*;
 
 import org.cardgame.gameobjects.Card;
+import org.cardgame.gameobjects.bases.DrawableBackground;
 import org.cardgame.gameobjects.bases.DrawableObject;
 import org.cardgame.gameobjects.other.CardTypes;
 import org.cardgame.help.WindowHelp;
@@ -14,6 +15,8 @@ import java.util.Random;
 public class Game {
     public static ArrayList<DrawableObject> drawableGameObjects = new ArrayList<>();
     public static Camera3D camera3d;
+
+    public static DrawableBackground bg;
 
     public static void initDrawableGameObjects() {
         // add all cards
@@ -30,6 +33,8 @@ public class Game {
 
         Card c2 = new Card(new Vector2().y(65).y(65), num);
         drawableGameObjects.add(c2);
+
+        bg = new DrawableBackground(LoadTexture("textures/backgrounds/default.png"));
     }
 
     public static void updateDrawables() {
@@ -40,6 +45,8 @@ public class Game {
     }
 
     public static void renderDrawables() {
+        bg.draw();
+
         // drawable objects
         for (DrawableObject obj : drawableGameObjects) {
             obj.draw();
