@@ -21,12 +21,13 @@ public class Main {
 
         // main game loop
         while(!WindowShouldClose()) {
+            WindowHelp.traceWinMidPos();
+
             Game.update();
 
             // rendering
             BeginDrawing();
                 ClearBackground(Jaylib.SKYBLUE);
-
 
                 Game.render();
 
