@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("application")
 }
 
 group = "org.cardgame"
@@ -23,4 +24,8 @@ tasks.withType<Jar> {
     manifest {
         attributes["Main-Class"] = "org.cardgame.Main"
     }
+}
+
+application {
+    mainClass.set("org.cardgame.Main")
 }
