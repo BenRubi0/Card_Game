@@ -5,7 +5,6 @@ import static com.raylib.Raylib.*;
 import org.cardgame.gameobjects.Card;
 import org.cardgame.gameobjects.bases.DrawableBackground;
 import org.cardgame.gameobjects.bases.DrawableObject;
-import org.cardgame.gameobjects.cards.AceOfSpades;
 import org.cardgame.help.WindowHelp;
 import org.cardgame.help.texture.CardMaps;
 
