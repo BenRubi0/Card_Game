@@ -34,8 +34,6 @@ public class Game {
         Card c2 = new Card(new Vector2().y(65).y(65), num);
         drawableGameObjects.add(c2);
 
-        drawableGameObjects.add(new AceOfSpades(WindowHelp.getWinMidPos()));
-
         bg = new DrawableBackground(LoadTexture("textures/backgrounds/default.png"));
     }
 
