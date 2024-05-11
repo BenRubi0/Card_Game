@@ -1,8 +1,11 @@
+// Made by Benjamin Rubio
+// For Mr. Gross Software and Programming Dev 1 Class
+// Contact at benjamin.rubio@malad.us
+
 package org.cardgame.gameobjects.bases;
 
 import com.raylib.Jaylib;
 import org.cardgame.help.Drawable;
-import org.cardgame.help.WindowHelp;
 
 import static com.raylib.Raylib.*;
 

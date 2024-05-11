@@ -1,3 +1,7 @@
+// Made by Benjamin Rubio
+// For Mr. Gross Software and Programming Dev 1 Class
+// Contact at benjamin.rubio@malad.us
+
 package org.cardgame.help.game;
 
 import static com.raylib.Raylib.*;
@@ -85,7 +89,7 @@ public class Game {
     }
 
     public static void render3D() {
-
+        // empty
     }
 
     public static void update() {
