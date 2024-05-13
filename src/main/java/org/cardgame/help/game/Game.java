@@ -10,6 +10,7 @@ import org.cardgame.gameobjects.Card;
 import org.cardgame.gameobjects.bases.DrawableBackground;
 import org.cardgame.gameobjects.bases.DrawableObject;
 import org.cardgame.help.WindowHelp;
+import org.cardgame.help.gui.DefaultButton;
 import org.cardgame.help.texture.CardMaps;
 
 import java.util.ArrayList;
@@ -36,6 +37,8 @@ public class Game {
 
         Card c2 = new Card(new Vector2().y(65).y(65), num);
         drawableGameObjects.add(c2);
+
+        drawableGameObjects.add(new DefaultButton(WindowHelp.getWinMidPos()));
 
         bg = new DrawableBackground(LoadTexture("textures/backgrounds/default.png"));
     }
