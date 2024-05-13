@@ -11,8 +11,6 @@ import org.cardgame.gameobjects.bases.DrawableObject;
 import org.cardgame.gameobjects.interfaces.Object;
 import org.cardgame.help.ClickDetector;
 
-import java.lang.management.GarbageCollectorMXBean;
-
 public abstract class GuiButton extends DrawableObject implements Object {
     public Rectangle hitbox;
 
