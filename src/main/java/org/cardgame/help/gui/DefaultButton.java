@@ -4,10 +4,6 @@
 
 package org.cardgame.help.gui;
 
-
-import com.raylib.Jaylib;
-import com.sun.jdi.VoidValue;
-
 import java.util.Random;
 
 import static com.raylib.Raylib.*;
