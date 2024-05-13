@@ -15,7 +15,7 @@ public class DrawableObject extends Drawable implements Object {
     public Vector2 pos;
 
     // drawing other stuff
-    public boolean isDebugDrawing = false;
+    public boolean isDebugDrawing = true;
 
     public DrawableObject(Texture texture, Vector2 pos) {
         this.texture = texture;

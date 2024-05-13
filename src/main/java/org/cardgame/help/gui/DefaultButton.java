@@ -4,6 +4,12 @@
 
 package org.cardgame.help.gui;
 
+
+import com.raylib.Jaylib;
+import com.sun.jdi.VoidValue;
+
+import java.util.Random;
+
 import static com.raylib.Raylib.*;
 
 public class DefaultButton extends GuiButton{
@@ -13,16 +19,21 @@ public class DefaultButton extends GuiButton{
 
     @Override
     public void onClick() {
-        System.out.println(this + " clicked!");
+        Random rand = new Random();
+        int rand1 = rand.nextInt(200, 500);
+        int rand2 = rand.nextInt(500, 1000);
+        this.pos = new Vector2().x(rand1).y(rand2);
     }
 
     @Override
     public void onHover() {
-
     }
 
     @Override
     public void onHoverExit() {
+    }
 
+    @Override
+    public void onMouseDown() {
     }
 }

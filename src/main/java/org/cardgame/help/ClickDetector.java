@@ -4,6 +4,7 @@
 
 package org.cardgame.help;
 
+import com.raylib.Jaylib;
 import org.cardgame.gameobjects.bases.DrawableObject;
 
 import static com.raylib.Raylib.*;
@@ -12,29 +13,27 @@ public class ClickDetector {
     Rectangle hitbox;
     DrawableObject object;
 
-    public boolean isHovering = false;
-    public boolean isClicking = false;
-    public boolean didClick = false;
-
     public ClickDetector(DrawableObject object) {
         this.hitbox = new Rectangle().x(object.pos.x()).y(object.pos.y()).width(object.texture.width()).height(object.texture.height());
         this.object = object;
     }
 
-    public void detect() {
+    public void detect(Runnable clickCallback, Runnable mouseDownCallback, Runnable hoverCallback, Runnable exitHoverCallback) {
         Vector2 mousePosition = GetMousePosition();
         boolean colliding = CheckCollisionPointRec(mousePosition, this.hitbox);
         if (colliding) {
-            isHovering = true;
-            if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-                isClicking = !IsMouseButtonReleased(MOUSE_BUTTON_LEFT);
-                if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
-                    didClick = true;
+            hoverCallback.run();
+            if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)) {
+                mouseDownCallback.run();
+            } else if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT)) {
+                clickCallback.run();
             }
         } else {
-            isHovering = false;
-            isClicking = false;
-            didClick = false;
+            exitHoverCallback.run();
         }
+    }
+
+    public void drawHitbox() {
+        DrawRectangleLinesEx(this.hitbox, 5.0f, Jaylib.RED);
     }
 }
